@@ -18,7 +18,7 @@
 	</div>
 	<div class="box3a">
 		发言讨论结束，大家请投票
-		<button class="icon3a" onclick="playPause()"></button>
+		<div class="icon3a"></div>
 	</div>
 	<div class="box4a">
 		点击得票数最多人的头像
@@ -210,14 +210,30 @@
   crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	
-<script>var myAudio = document.getElementById('audio1');
-    function playPause(){
-        if(myAudio.paused){
-            myAudio.play();
-        }else{
-            myAudio.pause();
+
+<script>
+    //播放器控制
+    var audio = document.getElementById('audio1');
+    $('.icon3a').click(function(){
+        //防止冒泡
+        if(audio.paused) //如果当前是暂停状态
+        {
+            $('.icon3a').css("background","url(images/p1.png)");
+            $('.icon3a').css("background-position","-27px -24px");
+            $('.icon3a').css("background-size","240px");
+            audio.play();//播放
+            return;
         }
-    }
+        
+        //当前是播放状态
+        	$('.icon3a').css("background","url(images/p1.png)");
+            $('.icon3a').css("background-position","0 -24px");
+            $('.icon3a').css("background-size","240px");
+        audio.pause(); //暂停
+
+
+    });
 </script>
+
 </body>
 </html>

@@ -12,7 +12,7 @@ body{
 	z-index: 1032;
 }
 .box2a{
-	margin: 40px 0 0 0;
+	margin: 20px 0 0 0;
 	height: 30px;
 	text-align: center;
 	font-size: 1rem;
@@ -22,7 +22,7 @@ body{
 .icon1a{
 	position: absolute;
 	left: 10px;
-	top: 40px;
+	top: 20px;
 	width: 25px;
 	height: 25px;
 	background-size: 250px;
@@ -32,7 +32,7 @@ body{
 .icon2a{
 	position: absolute;
 	right: 10px;
-	top: 40px;
+	top: 20px;
 	width: 25px;
 	height: 25px;
 	background-size: 250px;
@@ -51,14 +51,15 @@ body{
 .icon3a{
 	position: absolute;
 	right: 8px;
-	top: 75px;
-	width: 29px;
+	top: 55px;
+	width: 28px;
 	height: 29px;
 	background-size: 240px;
 	border-style: none;
 	background-color: #b9e9f5;
 	background-image: url(images/p1.png);
-	background-position: 0 -24px;
+	background-position: -27px -24px;
+	cursor: pointer;
 }
 .box4a{
 	height: 40px;
@@ -155,4 +156,7 @@ body{
 	height: 50px;
 	background-color: #fbb435;
 	border-style: none;
+}
+.icon3a:checked{
+	border: 3px solid black;
 }
