@@ -36,6 +36,7 @@ body{
 	background-color: #fff;
 	color: #b6b6b6;
 	border: 1px solid #b6b6b6;
+	cursor: pointer;
 }
 .icon1{
 	float: right;
@@ -80,6 +81,7 @@ body{
 	background-color: #29bde0;
 	font-size: 1.2rem;
 	color: #fff;
+	cursor: pointer;
 }
 .text1,
 .text2,
@@ -127,7 +129,7 @@ ol{
 	</div>
 </header>
 
-<div class="box1">
+<div class="box1" onclick="window.location.href='M7A.html'">
 	上次游戏：捉鬼猜词版
 	<span class="icon1 glyphicon glyphicon-menu-right"></span>
 </div>
@@ -138,20 +140,20 @@ ol{
 
 <div id="box3" class="carousel slide">
   	<!-- Indicators -->
-  	<ol class="carousel-indicators">
+  	<ol class="carousel-indicators"><!-- 就是下面的4个小点 -->
    		<li data-target="#box3" data-slide-to="0" class="active"></li>
     	<li data-target="#box3" data-slide-to="1"></li>
     	<li data-target="#box3" data-slide-to="2"></li>
     	<li data-target="#box3" data-slide-to="2"></li>
   	</ol>
   	<!-- Wrapper for slides -->
-  	<div class="carousel-inner" role="listbox">
+  	<div class="carousel-inner" role="listbox"><!-- 每一页的内容 -->
     	<div class="item active box4">
-    		<div class="version1">简化版</div>
+    		<div class="version1" onclick="window.location.href='M7A.html'">简化版</div>
     		<div class="text1">有2411个用户正在玩此游戏</div>
-    		<div class="version2">猜词版</div>
+    		<div class="version2" onclick="window.location.href='M7A.html'">猜词版</div>
     		<div class="text2">有2411个用户正在玩此游戏</div>
-    		<div class="version3">白痴版</div>
+    		<div class="version3" onclick="window.location.href='M7A.html'">白痴版</div>
     		<div class="text3">有2411个用户正在玩此游戏</div>
     	</div>
 
@@ -160,12 +162,12 @@ ol{
     		<div class="text1">有2411个用户正在玩此游戏</div>
     		<div class="version2">我黑咕天乐</div>
     		<div class="text2">有2411个用户正在玩此游戏</div>
-    		<div class="version3">我黑渣渣辉</div>
+    		<div class="version3">我系渣渣辉</div>
     		<div class="text3">有2411个用户正在玩此游戏</div>
     	</div>
 
     	<div class="item box4">
-    		<div class="version1">我黑陈小春</div>
+    		<div class="version1">我是陈小春</div>
     		<div class="text1">有2411个用户正在玩此游戏</div>
     		<div class="version2">贪玩懒月</div>
     		<div class="text2">有2411个用户正在玩此游戏</div>
@@ -182,7 +184,7 @@ ol{
     		<div class="text3">有2411个用户正在玩此游戏</div>
     	</div>
   	</div>
- 	<!-- Controls -->
+ 	<!-- Controls --><!-- 翻页的按钮 -->
   	<a class="button1" href="#box3" role="button" data-slide="next">
     	<span class="glyphicon glyphicon-triangle-right"></span>
   	</a>
