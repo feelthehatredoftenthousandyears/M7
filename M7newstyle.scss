@@ -1,0 +1,217 @@
+@charset "UTF-8";
+//定义颜色和字体变量
+$gray: rgb(239,240,244);
+$lightblue: rgb(95,192,205);
+$lightgray: #c7c7c7;
+$darkgray: #b6b6b6;
+$red: #fb0404;
+$darkblue: #55a8b3;
+$orange: #fbb435;
+$yh: Microsoft YaHei;
+//浏览器前缀模块
+@mixin compatibility($value1, $value2) {
+	-webkit-#{$value1}: $value2;
+	-moz-#{$value1}: $value2;
+	-ms-#{$value1}: $value2;
+	-o-#{$value1}: $value2;
+	#{$value1}: $value2;
+}
+@mixin border($side, $px: 1px, $bcolor: $lightgray) {
+	border#{$side}: $px solid $bcolor;
+}
+@mixin shadow($svalue, $scolor) {
+	box-shadow: 0 0 $svalue 2px $scolor;
+}
+//好戏开场啦
+body {
+	background-color: #f0f0f0;
+}
+input {
+	display: none;//隐藏单选框
+}
+//用CheckBox模拟菜单
+.u-simsideswitch {
+	//切换开关
+	position: fixed;
+	top: 0;
+	height: 50px;
+	padding: 10px 10px 0;
+	box-sizing: border-box;
+	z-index: 999;
+	font-size: .3rem;
+	color: #fff;
+}
+.g-container {
+	//整体部分
+	white-space: nowrap;
+	overflow: hidden;
+	margin-top: 50px;
+	font-size: 0;
+}
+.g-side {
+	//侧边部分
+	display: inline-block;
+	height: 0;
+	width: 0;
+	vertical-align: top;
+	-webkit-transition: 1s;//过度效果
+	transition: 1s;
+	font-size: .16rem;
+	background-color: #fff;
+}
+.m-sideinner {
+	//侧边内容
+	padding: 14px;
+	visibility: hidden;
+	cursor: pointer;
+	@include border(-bottom, 1px, $lightgray);
+	&:hover {
+		@include shadow(2px, $lightgray);
+	}
+	span {
+		display: inline-block;
+		vertical-align: middle;
+		padding-top: 4px;
+		&:first-child {
+			font-size: .24rem;
+			padding:0;
+		}
+	}
+}
+.g-main {
+	//右边正文
+	display: inline-block;
+	width: 100%;
+}
+.u-sideswitch:checked ~ .g-container>.g-side {
+	//控制侧边栏收放
+	width: 250px;
+	height: calc(100vh - 50px);
+	@include border(-right,4px,$lightblue);
+}
+.u-sideswitch:checked ~ .g-container .m-sideinner {
+	//侧边栏内容显示
+	visibility: visible;
+}
+.t-gametitle {
+	//贪玩懒月~
+	margin: 20px 20px 0;
+	padding: 10px 0;
+	text-align: center;
+	font-size: .2rem;
+	color: $orange;
+	background-color: #fff;
+	@include border(null, 1px ,$darkgray);
+	@include border(-bottom, 1px ,$orange);
+}
+.m-gameviewbox {
+	//模拟轮播的视口，因为使用了transform所以不支持IE10以下
+	margin: 0 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 0;
+	background-color: #fff;
+	@include border(null, 1px, $darkgray);
+	@include border(-top, 1px, transparent);
+}
+.gamebox {
+	//拆分出来的option样式，考虑到未来应该用不到所以没有放在global样式中
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	padding: 20px 0 0;
+	text-align: center;
+	font-size: .16rem;
+	transition: -webkit-transform 1s, transform 1s;
+}
+.u-gamechoise {
+	//我系渣渣辉
+	margin: 0 35px;
+	padding: 30px 0;
+	background-color: $lightblue;
+	color: #fff;
+	cursor: pointer;
+	font: {
+		size: .18rem;
+		family: $yh;
+	}
+	&:hover {
+		@include shadow(2px, $lightgray);
+	}
+}
+.u-gamechoise2 {
+	//2411
+	margin: 15px 0;
+	font-size: .14rem;
+	color: $lightgray;
+}
+//通过CheckBox+transform实现滑动的页面切换效果
+.u-gameoption:checked ~ .m-gameviewbox  .m-gameboxpage {
+	transform: translateX(0);
+}
+.u-gameoption2:checked ~ .m-gameviewbox  .m-gameboxpage {
+	transform: translateX(-100%);
+}
+.u-gameoption2:checked ~ .m-gameviewbox  .m-gameboxpage2 {
+	transform: translateX(-100%);
+}
+.u-gameoption2:checked ~ .m-gameviewbox  .m-gameboxpage3 {
+	transform: translateX(-100%);
+}
+.u-gameoption3:checked ~ .m-gameviewbox  .m-gameboxpage3 {
+	transform: translateX(-200%);
+}
+.u-gameoption3:checked ~ .m-gameviewbox  .m-gameboxpage2 {
+	transform: translateX(-200%);
+}
+.u-gameoption3:checked ~ .m-gameviewbox  .m-gameboxpage {
+	transform: translateX(-200%);
+}
+.u-next {
+	//下一个
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0px;
+	height: 0px;
+	margin-top: 12%\9\0;
+	@include border(null, 25px, transparent);
+	@include border(-left, 15px, $orange);
+	transform: translate(10px,160px);
+}
+.u-previous {
+	//上一个
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 0;
+	margin-top: 12%\9\0;//hack了IE9
+	@include border(null, 25px, transparent);
+	@include border(-right, 15px, $orange);
+	transform: translate(-10px,160px);
+}
+.m-optionlist {
+	//下面的3个点
+	padding-bottom: 10px;
+	text-align: center;
+	label {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		margin: 3px;
+		line-height: 10px;
+		border-radius: 50%;
+		background-color: $lightgray;
+	}
+}
+//三个小点的切换样式
+.u-gameoption:checked ~ .m-gameviewbox .u-simgameoption {
+	background-color: $lightblue;
+}
+.u-gameoption2:checked ~ .m-gameviewbox .u-simgameoption2 {
+	background-color: $lightblue;
+}
+.u-gameoption3:checked ~ .m-gameviewbox .u-simgameoption3 {
+	background-color: $lightblue;
+}
+

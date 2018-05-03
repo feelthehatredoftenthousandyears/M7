@@ -1,0 +1,167 @@
+@charset "UTF-8";
+//定义颜色和字体变量
+$gray: rgb(239,240,244);
+$blue: #29bde0;
+$lblue: #b9e9f5;
+$lgray: #c7c7c7;
+$dgray: #b6b6b6;
+$red: #fb0404;
+$dblue: #55a8b3;
+$orange: #fbb435;
+$yh: Microsoft YaHei;
+//浏览器前缀模块
+@mixin compatibility($value1, $value2) {
+	-webkit-#{$value1}: $value2;
+	-moz-#{$value1}: $value2;
+	-ms-#{$value1}: $value2;
+	-o-#{$value1}: $value2;
+	#{$value1}: $value2;
+}
+@mixin border($side, $px: 1px, $bcolor: $lightgray) {
+	border#{$side}: $px solid $bcolor;
+}
+@mixin shadow($sdis: 2px, $svalue: 2px, $scolor: $lgray, $sin: null) {
+	box-shadow: 0 0 $sdis $svalue $scolor $sin;
+}
+//好戏开场啦
+.m-navbar {
+	//通用样式的导航条
+	box-sizing: border-box;
+	color: #fff;
+	padding-top: 20px;
+	font-weight: 700;
+	font-size: .18rem;
+}
+.u-icon1 {
+	//头部按钮1
+	float: left;
+	margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    background-image: url(images/p1.png);
+    background-size: 250px;
+    cursor: pointer;
+}
+.u-icon2 {
+	//头部按钮2
+	float: right;
+	margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    background: url(images/p1.png) -25px 0;
+    background-size: 250px;
+    cursor: pointer;
+}
+.m-music {
+	//音乐栏的按钮
+	margin-top: 50px;
+	padding: 10px;
+	background-color: $lblue;
+	font-size: .14rem;
+	font-family: $yh;
+}
+.u-icon3 {
+	//音乐栏按钮
+	float: right;
+	width: 28px;
+    height: 29px;
+    margin-top: -6px;
+    background-size: 240px;
+    border-style: none;
+    background-color: #b9e9f5;
+    background-image: url(images/p1.png);
+    background-position: -27px -24px;
+    cursor: pointer;
+}
+.m-delta {
+	//倒三角形栏
+	position: relative;
+	padding: 10px 30px;
+	color: #fff;
+	font-family: $yh;
+	font-size: .14rem;
+	background-color: $blue;
+}
+.u-delta {
+	//但三角型样式
+	top: 0;
+	left: 20px;
+	border-top: 7px solid $lblue;
+}
+.g-main {
+	//主体
+	font-size: 0;
+}
+.m-box1 {
+	//外部盒子
+	display: inline-block;
+	width: 33.33%;
+	margin: 15px 0 0;
+	text-align: center;
+	font-size: .14rem;
+}
+.m-textbox {
+	//内部盒子
+	width: 70px;
+	margin: 0 auto;
+	cursor: pointer;
+	@include border(null, 2px, #fff);
+	&:hover ~ .m-iconblock{
+		visibility: inherit;
+		opacity: 1;
+	}
+}
+.t-class {
+	//职业
+	height: 50px;
+	line-height: 50px;
+	background-color: $orange;
+}
+.t-number {
+	//编号
+	height: 20px;
+	line-height: 20px;
+	background-color: #83b09a;
+}
+.m-iconblock {
+	margin-top: 15px;
+	visibility: hidden;
+	opacity: 0;
+	transition-duration:2s;
+}
+.smicon {
+	//小图标盒子
+	display: inline-block;
+    height: 13px;
+    width: 13px;
+    cursor: pointer;
+    background-size: 200px;
+    background-image: url(images/p1.png);
+}
+.u-smicon1 {
+    background-position: 0 -45px;
+}
+.u-smicon2 {
+    background-position: 0 -62px;
+}
+.u-smicon3 {
+    background-position: -16px -45px;
+}
+.u-smicon4 {
+    background-position: -16px -62px;
+}
+.g-footbox {
+	position: fixed;
+	z-index: 999;
+	bottom: 0;
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+	font-size: 0;
+	background-color: $blue;
+}
+.u-footbtn {
+	//底部按钮
+	padding: 15px 20%;
+	background-color: $orange;
+}

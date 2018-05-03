@@ -2,86 +2,96 @@
 <html>
 <head>
 <title>mission 7</title>
-<meta content="text/html" charset="UTF-8"/>
-<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, 	maximum-scale=1, user-scalable=no"/>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href="M7style.css" rel="stylesheet" type="text/css"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta content="text/html" charset="UTF-8">
+<meta id="viewport" name="viewport" content="width=device-width, 
+	initial-scale=1, maximum-scale=1, user-scalable=no">
+<link href="reset.css" rel="stylesheet" type="text/css">
+<link href="M7fontstyle.css" rel="stylesheet" type="text/css">
+<link href="global.css" rel="stylesheet" type="text/css">
+<link href="M7newstyle.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-<header>
-	<div class="title1">
-		<button class="btn btn-info b1" type="button">
-        	<span class="glyphicon glyphicon-menu-hamburger"></span>
-       	</button>
+<div class="m-navbar"></div>
+<input class="u-sideswitch" id="input1" type="checkbox" name="input1"/>
+<label class="u-simsideswitch" for="input1"><span class="icon-menu"></label>
+
+<div class="g-container">
+	<div class="g-side">
+		<div class="m-sideinner c-blue">
+			<span class="icon-sm"></span>
+			<span>公告</span>
+			<span class="fw-7 flt-r">></span> 
+		</div>
+		<div class="m-sideinner c-blue">
+			<span class="icon-sz"></span>
+			<span>设置</span>
+			<span class="fw-7 flt-r">></span>
+		</div>
+		<div class="m-sideinner c-blue">
+			<span class="icon-yl"></span>
+			<span>帮助</span>
+			<span class="fw-7 flt-r">></span> 
+		</div>
+		<div class="m-sideinner c-blue">
+			<span class="icon-th"></span>
+			<span>关于</span>
+			<span class="fw-7 flt-r">></span>
+		</div>
 	</div>
-</header>
 
-<div class="box1" onclick="window.location.href='M7A.html'">
-	上次游戏：捉鬼猜词版
-	<span class="icon1 glyphicon glyphicon-menu-right"></span>
+	<div class="g-main">
+		<div class="pst-r mgt-30 mgl-20 mgr-20 ta-c pdt-20 pdb-20 fs-20 c-dgray b-white fm-yh csr-p brd-dray" onclick="window.location.href='M7A.html'">
+		上次游戏：怀旧版
+			<span class="pst-a pdt-20 pdb-20 pdr-10 right top">></span>
+		</div>
+		<!--↑这种完全的样式分离写起来很麻烦，也不符合语义化的要素。HTML描述了网页的内容，CSS描述的网页布局样式，而我在写这个的时候感觉好像CSS还没出现。-->
+		<div class="t-gametitle">贪玩懒月</div>
+		
+		<input class="u-gameoption" type="radio" id="input2" name="input2" checked="checked"/>
+		<input class="u-gameoption2" type="radio" id="input3" name="input2"/>
+		<input class="u-gameoption3" type="radio" id="input4" name="input2"/>
+
+	<div class="m-gameviewbox">
+		<div class="m-gameboxpage gamebox">
+			<div class="u-gamechoise">大家好</div>
+			<div class="u-gamechoise2">有2411个用户正在玩此游戏</div>
+			<div class="u-gamechoise">我黑咕天落</div>
+			<div class="u-gamechoise2">有2411个用户正在玩此游戏</div>
+			<div class="u-gamechoise">我系渣渣辉</div>
+			<div class="u-gamechoise2">有2411个用户正在玩此游戏</div>
+			<label class="u-next" for="input3"></label>
+		</div>
+
+		<div class="m-gameboxpage2 gamebox">
+			<div class="u-gamechoise">我似沉小春</div>
+			<div class="u-gamechoise2">有2411个用户正在玩此游戏</div>
+			<div class="u-gamechoise">贪玩懒月</div>
+			<div class="u-gamechoise2">有2411个用户正在玩此游戏</div>
+			<div class="u-gamechoise">你重来没有玩过的船新版本</div>
+			<div class="u-gamechoise2">有2411个用户正在玩此游戏</div>
+			<label class="u-previous" for="input2"></label>
+			<label class="u-next" for="input4"></label>
+		</div>
+
+		<div class="m-gameboxpage3 gamebox">
+			<div class="u-gamechoise">只需体验一分钟</div>
+			<div class="u-gamechoise2">有2411个用户正在玩此游戏</div>
+			<div class="u-gamechoise">里就会和我一样</div>
+			<div class="u-gamechoise2">有2411个用户正在玩此游戏</div>
+			<div class="u-gamechoise">爱上介款游戏</div>
+			<div class="u-gamechoise2">有2411个用户正在玩此游戏</div>
+			<label class="u-previous" for="input3"></label>
+		</div>
+
+		<div class="m-optionlist">
+			<label class="u-simgameoption" for="input2"></label>
+			<label class="u-simgameoption2" for="input3"></label>
+			<label class="u-simgameoption3" for="input4"></label>
+		</div>
+	</div>
 </div>
 
-<div class="box2">
-	捉鬼游戏
-</div>
-
-<div id="box3" class="carousel slide">
-  	<!-- Indicators -->
-  	<ol class="carousel-indicators"><!-- 就是下面的4个小点 -->
-   		<li data-target="#box3" data-slide-to="0" class="active"></li>
-    	<li data-target="#box3" data-slide-to="1"></li>
-    	<li data-target="#box3" data-slide-to="2"></li>
-    	<li data-target="#box3" data-slide-to="2"></li>
-  	</ol>
-  	<!-- Wrapper for slides -->
-  	<div class="carousel-inner" role="listbox"><!-- 每一页的内容 -->
-    	<div class="item active box4">
-    		<div class="version1" onclick="window.location.href='M7A.html'">简化版</div>
-    		<div class="text1">有2411个用户正在玩此游戏</div>
-    		<div class="version2" onclick="window.location.href='M7A.html'">猜词版</div>
-    		<div class="text2">有2411个用户正在玩此游戏</div>
-    		<div class="version3" onclick="window.location.href='M7A.html'">白痴版</div>
-    		<div class="text3">有2411个用户正在玩此游戏</div>
-    	</div>
-
-    	<div class="item box4">
-    		<div class="version1">大家好</div>
-    		<div class="text1">有2411个用户正在玩此游戏</div>
-    		<div class="version2">我黑咕天乐</div>
-    		<div class="text2">有2411个用户正在玩此游戏</div>
-    		<div class="version3">我系渣渣辉</div>
-    		<div class="text3">有2411个用户正在玩此游戏</div>
-    	</div>
-
-    	<div class="item box4">
-    		<div class="version1">我是陈小春</div>
-    		<div class="text1">有2411个用户正在玩此游戏</div>
-    		<div class="version2">贪玩懒月</div>
-    		<div class="text2">有2411个用户正在玩此游戏</div>
-    		<div class="version3">你从未玩过得传新版本</div>
-    		<div class="text3">有2411个用户正在玩此游戏</div>
-    	</div>
-
-    	<div class="item box4">
-    		<div class="version1">只需体验一分钟</div>
-    		<div class="text1">有2411个用户正在玩此游戏</div>
-    		<div class="version2">你就会和我一样</div>
-    		<div class="text2">有2411个用户正在玩此游戏</div>
-    		<div class="version3">爱上介款游戏</div>
-    		<div class="text3">有2411个用户正在玩此游戏</div>
-    	</div>
-  	</div>
- 	<!-- Controls --><!-- 翻页的按钮 -->
-  	<a class="button1" href="#box3" role="button" data-slide="next">
-    	<span class="glyphicon glyphicon-triangle-right"></span>
-  	</a>
-</div>
-<!-- Latest compiled and minified CSS -->
-<script
-  src="https://code.jquery.com/jquery-1.12.4.js"
-  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
-  crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

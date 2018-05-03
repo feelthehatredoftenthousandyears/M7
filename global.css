@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/*样式表分离规则
+	属性：采用单词的字母缩写。
+	值：采用单字母缩写。颜色值采用全称。
+	中间用连字符链接。
+	example（左浮动：flt-l）*/
+
+
+/*global style////////////////////////////////////////////////////////*/
+.pst-f {position: fixed;}.pst-a {position: absolute;}.pst-r {position: relative;}
+.flt-l {float: left;}.flt-r {float: right;}
+.dsp-ib {display: inline-block;}.dsp-i {display: inline;}.dsp-b {display: block;}
+.wth-100p {width: 100%;}.wth-80p {width: 80%;}
+.hgt-50 {height: 50px;}
+
+.mgt-30 {margin-top: 30px;}.mgt-50{margin-top: 50px;}.mgt-80{margin-top: 80px;}
+.mgb-30 {margin-bottom: 30px;}.mgb-50{margin-bottom: 50px;}
+.mgl-5 {margin-left: 5px;}.mgl-10 {margin-left: 10px;}.mgl-15 {margin-left: 15px;}.mgl-20 {margin-left: 20px;}
+.mgl-5p {margin-left: 5%;}.mgl-10p {margin-left: 10%;}.mgl-15p {margin-left: 15%;}
+.mgr-5 {margin-right: 5px;}.mgr-10 {margin-right: 10px;}.mgr-15 {margin-right: 15px;}.mgr-20 {margin-right: 20px;}
+.mgr-5p {margin-right: 5%;}.mgr-10p {margin-right: 10%;}.mgr-15p {margin-right: 15%;}
+
+.pdt-10{padding-top: 10px;}.pdt-20{padding-top: 20px;}.pdt-30 {padding-top: 30px;}.pdt-50{padding-top: 50px;}
+.pdt-10{padding-bottom: 10px;}.pdb-20 {padding-bottom: 20px;}.pdb-30 {padding-bottom: 30px;}.pdb-50{padding-bottom: 50px;}
+.pdl-5 {padding-left: 5px;}.pdl-10 {padding-left: 10px;}
+.pdl-5p {padding-left: 5%;}.pdl-10p {padding-left: 10%;}.pdl-15p {padding-left: 15%;}
+.pdr-5 {padding-right: 5px;}.pdr-10 {padding-right: 10px;}
+.pdr-5p {padding-right: 5%;}.pdr-10p {padding-right: 10%;}.pdr-15p {padding-right: 15%;}
+
+.ta-c {text-align: center;}.ta-l {text-align: left;}
+.va-m {vertical-align: middle;}
+
+.right {right: 0;} .top {top: 0;}
+
+.lh-50 {line-height: 50px}
+
+.c-blue {color: #29bde0;}.c-black {color: #000;}.c-white {color: #fff;}.c-orange {color: #fbb435;}.c-lgray {color: #e7e7e7;}.c-dgray {color:#b6b6b6;}
+.b-blue {background-color: #29bde0;}.b-black {background-color: #000;}.b-white {background-color: #fff;}.b-orange {background-color: #fbb435;}.b-lgray {background-color: #e7e7e7;}.b-dgray {background-color:#b6b6b6;}.b-red{background-color: #f66f6f;}
+
+.fs-0 {font-size: .0;}.fs-12 {font-size: .12rem;}.fs-14 {font-size: .14rem;}.fs-16 {font-size: .16rem;}.fs-18 {font-size: .18rem;}.fs-20 {font-size: .2rem;}
+.fm-yh {font-family: Microsoft YaHei;}
+.fw-7 {font-weight: 700;}
+
+.brd-lray {border: 1px solid #e7e7e7;}.brd-dray {border: 1px solid #b6b6b6;}.brd-tpt {border: 1px solid transparent;}
+.brdr-5 {border-radius: 5px}.brdr-5p {border-radius: 5%}.brdr-50p {border-radius: 50%}
+
+.csr-p {cursor: pointer;}
+/*/module/////////////////////////////////////////////////////////////////*/
+.m-navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	z-index: 998;
+	background-color: #29bde0;
+	text-align: center;
+}
+/*/unit/////////////////////////////////////////////////////////////////*/
+.delta {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+}
+.line {
+	width: 100%;
+	height: 1px;
+	background-color: #b6b6b6;
+}

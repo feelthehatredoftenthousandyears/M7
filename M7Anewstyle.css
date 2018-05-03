@@ -1,0 +1,127 @@
+.m-navbar {
+  box-sizing: border-box;
+  color: #fff;
+  padding-top: 20px;
+  font-weight: 700;
+  font-size: .18rem; }
+
+.u-icon1 {
+  float: left;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  background-image: url(images/p1.png);
+  background-size: 250px;
+  cursor: pointer; }
+
+.u-icon2 {
+  float: right;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  background: url(images/p1.png) -25px 0;
+  background-size: 250px;
+  cursor: pointer; }
+
+.m-music {
+  margin-top: 50px;
+  padding: 10px;
+  background-color: #b9e9f5;
+  font-size: .14rem;
+  font-family: Microsoft YaHei; }
+
+.u-icon3 {
+  float: right;
+  width: 28px;
+  height: 29px;
+  margin-top: -6px;
+  background-size: 240px;
+  border-style: none;
+  background-color: #b9e9f5;
+  background-image: url(images/p1.png);
+  background-position: -27px -24px;
+  cursor: pointer; }
+
+.m-delta {
+  position: relative;
+  padding: 10px 30px;
+  color: #fff;
+  font-family: Microsoft YaHei;
+  font-size: .14rem;
+  background-color: #29bde0; }
+
+.u-delta {
+  top: 0;
+  left: 20px;
+  border-top: 7px solid #b9e9f5; }
+
+.g-main {
+  font-size: 0; }
+
+.m-box1 {
+  display: inline-block;
+  width: 33.33%;
+  margin: 15px 0 0;
+  text-align: center;
+  font-size: .14rem; }
+
+.m-textbox {
+  width: 70px;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 2px solid #fff; }
+  .m-textbox:hover ~ .m-iconblock {
+    visibility: inherit;
+    opacity: 1; }
+
+.t-class {
+  height: 50px;
+  line-height: 50px;
+  background-color: #fbb435; }
+
+.t-number {
+  height: 20px;
+  line-height: 20px;
+  background-color: #83b09a; }
+
+.m-iconblock {
+  margin-top: 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 2s; }
+
+.smicon {
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  cursor: pointer;
+  background-size: 200px;
+  background-image: url(images/p1.png); }
+
+.u-smicon1 {
+  background-position: 0 -45px; }
+
+.u-smicon2 {
+  background-position: 0 -62px; }
+
+.u-smicon3 {
+  background-position: -16px -45px; }
+
+.u-smicon4 {
+  background-position: -16px -62px; }
+
+.g-footbox {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0;
+  background-color: #29bde0; }
+
+.u-footbtn {
+  padding: 15px 20%;
+  background-color: #fbb435; }
+
+/*# sourceMappingURL=M7Anewstyle.css.map */

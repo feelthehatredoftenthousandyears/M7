@@ -1,0 +1,103 @@
+body {
+  background-color: #29bde0; }
+
+.m-navbar {
+  box-sizing: border-box;
+  padding-top: 20px;
+  font-family: Microsoft YaHei;
+  font-size: .18rem;
+  color: #fff;
+  border-bottom: 1px solid #fff; }
+
+.u-icon1 {
+  float: left;
+  width: 28px;
+  height: 24px;
+  margin: -5px 10px;
+  background: url(images/p1.png) 0 -96px/250px; }
+
+.u-icon2 {
+  float: right;
+  width: 23px;
+  height: 25px;
+  margin: -5px 10px;
+  background: url(images/p1.png) -30px -96px/250px; }
+
+.p-victory {
+  width: 192px;
+  height: 120px;
+  margin: 85px auto 0px;
+  background: #29bde0 url(images/p1.png) -58px 0px/250px; }
+
+.t-victory {
+  margin: 0 auto 30px;
+  width: 250px;
+  font-size: .18rem;
+  color: #fbb435;
+  font-weight: 700; }
+
+.t-gamesta {
+  margin: 0 auto 10px;
+  width: 250px;
+  line-height: .2rem;
+  text-align: left;
+  word-spacing: 10px;
+  font-family: Microsoft YaHei;
+  font-size: .14rem;
+  color: #fff; }
+
+.g-main {
+  font-family: Microsoft YaHei;
+  background-color: #fff; }
+
+.u-gameinfo {
+  width: 250px;
+  margin: 0 auto;
+  padding: 15px 0;
+  background-color: #fff; }
+
+.t-gameinfo1 {
+  float: left;
+  font-size: .16rem; }
+
+.t-gameinfo2 {
+  float: right;
+  line-height: .25rem;
+  font-size: .13rem;
+  color: #a6a6a6; }
+
+.t-gameinfo3 {
+  padding: 30px 0 0 0;
+  font-size: .14rem;
+  color: #a6a6a6; }
+
+.m-foot {
+  position: fixed;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  background: rgba(41, 189, 224, 0.5); }
+
+.u-again {
+  float: left;
+  margin: 10px 0 10px 10%;
+  height: 40px;
+  width: 110px;
+  color: #fff;
+  font-size: .17rem;
+  font-weight: 700;
+  opacity: 1;
+  background-color: #f66f6f; }
+
+.u-share {
+  float: right;
+  margin: 10px 10% 10px 0;
+  height: 40px;
+  width: 110px;
+  color: #fff;
+  font-size: .17rem;
+  font-weight: 700;
+  opacity: 1;
+  background-color: #fbb435; }
+
+/*# sourceMappingURL=M7Bnewstyle.css.map */
